@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component Assignment</title>
+    <link rel="stylesheet" href="component-styles.css">
+</head>
+<body>
+    <h1>Quotes by C.S. Lewis</h1>
+    <button class="accordion">Quote 1</button>
+    <div class="panel">
+        <p>Christianity, if false, is of no importance, and if true, of infinite importance. The only thing it cannot be is moderately important.</p>
+    </div>
+
+    <button class="accordion">Quote 2</button>
+    <div class="panel">
+        <p>If you look for truth, you may find comfort in the end; if you look for comfort you will not get either comfort or truth only soft soap and wishful thinking to begin, and in the end, despair.</p>
+    </div>
+
+    <button class="accordion">Quote 3</button>
+    <div class="panel">
+        <p>Look for yourself, and you will find in the long run only hatred, loneliness, despair, rage, ruin, and decay. But look for Christ, and you will find Him, and with Him everything else thrown in.</p>
+    </div>
+
+    <button class="accordion">Quote 4</button>
+    <div class="panel">
+        <p>God cannot give us a happiness and peace apart from Himself, because it is not there. There is no such thing.</p>
+    </div>
+
+    <button class="accordion">Quote 5</button>
+    <div class="panel">
+        <p>A man can no more diminish God's glory by refusing to worship Him than a lunatic can put out the sun by scribbling the word, 'darkness' on the walls of his cell.</p>
+    </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            /* Toggle between adding and removing the "active" class,
+            to highlight the button that controls the panel */
+            this.classList.toggle("active");
+
+            /* Toggle between hiding and showing the active panel */
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+            panel.style.display = "none";
+            } else {
+            panel.style.display = "block";
+            }
+        });
+}
+    </script>
+</body>
+</html>
